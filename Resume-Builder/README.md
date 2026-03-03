@@ -1,29 +1,319 @@
-# Resume Creater
-Web based editor to create Resume in a customizable template with the facility to save the file in .pdf formate. 
+<div align="center">
 
-###### Technologies: HTML, CSS, JavaScript
+# 📄 Resume Builder
 
+### A web-based resume editor with multiple customizable templates and PDF export
 
-**Note** : Click the "VIEW INSTRUCTIONS" button in the editor to read usage instructions.
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+[![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 
-#### Features
-- Resume content can be edited just like a normal document editor (cut,copy,undo etc).
-- Entire sections can be added, reordered, removed just by cut,copy,pasting method.
-- Section visibility can be toggled while retaining the content.
-- Options provided in the left panel to modify the template and formatting.
-- Sub-points can be added with various bullet styles and adjustable indentation.
-- Script provided to merge multiple pages and compress the PDF.
+[![GitHub issues](https://img.shields.io/github/issues/iabhishek18/Resume-Builder?style=flat-square)](https://github.com/iabhishek18/Resume-Builder/issues)
+[![GitHub stars](https://img.shields.io/github/stars/iabhishek18/Resume-Builder?style=flat-square)](https://github.com/iabhishek18/Resume-Builder/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/iabhishek18/Resume-Builder?style=flat-square)](https://github.com/iabhishek18/Resume-Builder/network)
+[![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](./1/License.md)
 
-#### Using the merge & compress script
-- You must be able to run python file on your system for this.
-- Save the individual pages in PDF format with name ```1.pdf``` , ```2.pdf```
-- Download the ```compress_pdf.py``` file and open it in a text editor.
-- Set the following variables :
-	- ```dir_path``` : Directory path where you saved the PDFs for individual page
-	- ```num_of_pages``` : Number of files to merge (i.e. pages in your Resume)
-	- ```out_file``` : Name of output file
-- Run this python file.
-- Note: As this creates a new PDF file, you may have to see permission settings or run with sudo on terminal.
+---
 
-**Note** : Use Google Chrome
+**Build your professional resume in minutes — no sign-up required.**
 
+[View Demo](#demo) · [Report Bug](https://github.com/iabhishek18/Resume-Builder/issues/new?template=bug_report.md) · [Request Feature](https://github.com/iabhishek18/Resume-Builder/issues/new?template=feature_request.md)
+
+</div>
+
+---
+
+## 📖 Table of Contents
+
+- [About The Project](#-about-the-project)
+- [Demo](#-demo)
+- [Templates](#-templates)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
+- [Usage Guide](#-usage-guide)
+- [PDF Merge & Compress](#-pdf-merge--compress)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Contact](#-contact)
+
+---
+
+## 🧐 About The Project
+
+**Resume Builder** is a fully client-side, browser-based resume editor that lets you create professional resumes using customizable templates. Edit content directly in the browser like a document editor, tweak formatting with an intuitive sidebar, and export your resume as a PDF — all without creating an account or sending your data anywhere.
+
+### Why Resume Builder?
+
+- ✅ **No sign-up** — Start building immediately
+- ✅ **Privacy first** — All data stays in your browser
+- ✅ **Multiple templates** — Choose from 3 professionally designed layouts
+- ✅ **Highly customizable** — Control fonts, spacing, margins, section visibility & more
+- ✅ **Free & open source** — Use it, modify it, share it
+
+---
+
+## 🎬 Demo
+
+### Landing Page
+
+The landing page provides easy navigation to all three resume templates:
+
+<div align="center">
+  <img src="img/resume-1.jpeg" alt="Standard Resume Template" width="280"/>
+  &nbsp;&nbsp;
+  <img src="img/resume-2.jpeg" alt="Modern Resume Template" width="280"/>
+  &nbsp;&nbsp;
+  <img src="img/resume-3.jpg" alt="Basic Resume Template" width="280"/>
+</div>
+
+> **Note:** For the best experience, use **Google Chrome**.
+
+---
+
+## 🎨 Templates
+
+| # | Template | Description |
+|---|----------|-------------|
+| 1 | **Standard Resume** | Classic academic-style layout with tabular education section, ideal for university students |
+| 2 | **Modern Resume** | Clean, contemporary design with a purple-accented sidebar and streamlined sections |
+| 3 | **Basic Resume** | Minimalist template with a cyan theme, perfect for a quick professional resume |
+
+Each template includes sections for:
+
+> Education · Experience · Publications · Projects · Technical Skills · Positions of Responsibility · Achievements · Key Courses · Interests · Extra-Curriculars · References
+
+---
+
+## ✨ Features
+
+### Editor
+| Feature | Description |
+|---------|-------------|
+| 📝 **WYSIWYG Editing** | Edit resume content directly — supports cut, copy, paste, undo/redo |
+| 📂 **Section Management** | Add, reorder, or remove entire sections via cut/copy/paste |
+| 👁️ **Toggle Visibility** | Show or hide sections while retaining their content |
+| 🎛️ **Sidebar Controls** | Modify template settings, formatting, and layout from the left panel |
+| 📋 **Sub-points & Bullets** | Add sub-lists with multiple bullet styles and adjustable indentation |
+| 🖨️ **Print to PDF** | One-click export to PDF directly from the browser |
+
+### Template Settings
+| Setting | Options |
+|---------|---------|
+| Contact Lines | 2 / 3 / 4 lines |
+| Horizontal Margin | 6 levels |
+| Line Spacing | 6 levels |
+| Center Column Number | 1–4 columns |
+| Font Type | 4 font options |
+| Title Case | Default / Uppercase |
+| Title Style | Ruled / Shaded |
+| Title Rule Position | Above Title / Below Title |
+| Projects Layout | L1 / L2 |
+| Show/Hide Sections | Toggle any section on or off |
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| **Frontend** | HTML5, CSS3, JavaScript (ES5) |
+| **UI Framework** | Bootstrap 3 (minified) |
+| **DOM Manipulation** | jQuery, jQuery UI |
+| **Backend (optional)** | PHP (entry-point wrapper) |
+| **Utility Script** | Python 3 (PDF merge & compress) |
+| **Fonts** | Glyphicons Halflings, Google Fonts (Karla) |
+
+---
+
+## 📁 Project Structure
+
+```
+Resume-Builder/
+├── index.html              # Landing page with template selection
+├── index.php               # PHP wrapper for index.html
+├── composer.json            # PHP Composer configuration
+├── css/
+│   └── production.css       # Compiled CSS for landing page
+├── img/                     # Landing page images & social icons
+│   ├── resume-1.jpeg
+│   ├── resume-2.jpeg
+│   ├── resume-3.jpg
+│   └── ...
+├── 1/                       # Template 1 — Standard Resume
+│   ├── index.html
+│   ├── css/
+│   │   ├── bootstrap.min.css
+│   │   ├── main.css
+│   │   ├── theme.css
+│   │   ├── column_scroll.css
+│   │   └── thin_scroll.css
+│   ├── js/
+│   │   ├── main.js          # Core editor logic
+│   │   ├── jquery.min.js
+│   │   ├── jquery-ui.min.js
+│   │   └── bootstrap.min.js
+│   ├── fonts/               # Glyphicon font files
+│   ├── images/              # Template-specific images
+│   ├── letter-template/     # Cover letter template
+│   ├── compress_pdf.py      # PDF merge & compress utility
+│   ├── License.md
+│   └── README.md
+├── 2/                       # Template 2 — Modern Resume
+│   └── ... (same structure as Template 1)
+├── 3/                       # Template 3 — Basic Resume
+│   └── ... (same structure as Template 1)
+└── .github/
+    └── ISSUE_TEMPLATE/
+        ├── bug_report.md
+        └── feature_request.md
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- A modern web browser (Google Chrome recommended)
+- *(Optional)* A local web server if you want to use the PHP entry point
+- *(Optional)* Python 3 — only needed for the PDF merge & compress script
+
+### Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/iabhishek18/Resume-Builder.git
+   cd Resume-Builder
+   ```
+
+2. **Open directly in browser**
+
+   Simply open `index.html` in your browser:
+
+   ```bash
+   # macOS
+   open index.html
+
+   # Windows
+   start index.html
+
+   # Linux
+   xdg-open index.html
+   ```
+
+3. **Or serve with a local server** *(optional)*
+
+   ```bash
+   # Using Python
+   python -m http.server 8000
+
+   # Using PHP
+   php -S localhost:8000
+
+   # Then visit http://localhost:8000
+   ```
+
+---
+
+## 📝 Usage Guide
+
+1. **Select a template** from the landing page (Standard / Modern / Basic)
+2. Click **"VIEW INSTRUCTIONS"** in the editor for detailed usage tips
+3. **Edit content** directly on the resume — it works like a document editor
+4. Use the **left sidebar** to adjust template settings and formatting
+5. Use **"Show/Hide sections"** to toggle section visibility
+6. Click **"PRINT AS PDF"** to export your resume
+
+### Tips
+
+- Use `Ctrl+Z` / `Ctrl+Y` for undo/redo
+- Cut and paste entire sections to reorder them
+- Adjust line spacing and margins for multi-page resumes
+- Use the bullet style options to customize list formatting
+
+---
+
+## 📑 PDF Merge & Compress
+
+If your resume spans multiple pages, use the included Python script to merge and compress them into a single PDF.
+
+### Steps
+
+1. Save individual pages as PDF from the browser (name them `1.pdf`, `2.pdf`, etc.)
+
+2. Open `compress_pdf.py` in any text editor and configure:
+
+   ```python
+   dir_path = "/path/to/your/pdf/files"   # Directory with your PDFs
+   num_of_pages = 2                         # Number of pages to merge
+   out_file = "Resume.pdf"                  # Output file name
+   ```
+
+3. Run the script:
+
+   ```bash
+   python compress_pdf.py
+   ```
+
+> **Note:** You may need to run with `sudo` or adjust file permissions depending on your OS.
+
+---
+
+## 🤝 Contributing
+
+Contributions make the open-source community an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. **Fork** the repository
+2. **Create** your feature branch
+   ```bash
+   git checkout -b feature/amazing-feature
+   ```
+3. **Commit** your changes
+   ```bash
+   git commit -m "feat: add amazing feature"
+   ```
+4. **Push** to the branch
+   ```bash
+   git push origin feature/amazing-feature
+   ```
+5. **Open** a Pull Request
+
+### Contribution Ideas
+
+- [ ] Add more resume templates
+- [ ] Add dark mode support
+- [ ] Implement local storage to save progress
+- [ ] Add cover letter templates for all designs
+- [ ] Mobile-responsive editor layout
+- [ ] Export to DOCX format
+- [ ] Add template color theme picker
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**. See the [`License.md`](./1/License.md) file for details.
+
+---
+
+## 📬 Contact
+
+**Abhishek Mishra** — [@iabhishek18](https://github.com/iabhishek18)
+
+Project Link: [https://github.com/iabhishek18/Resume-Builder](https://github.com/iabhishek18/Resume-Builder)
+
+---
+
+<div align="center">
+
+### ⭐ Star this repo if you found it useful!
+
+Made with ❤️ by [Abhishek Mishra](https://github.com/iabhishek18)
+
+</div>
