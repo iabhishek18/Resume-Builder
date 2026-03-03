@@ -14,13 +14,13 @@
 [![GitHub issues](https://img.shields.io/github/issues/iabhishek18/Resume-Builder?style=flat-square)](https://github.com/iabhishek18/Resume-Builder/issues)
 [![GitHub stars](https://img.shields.io/github/stars/iabhishek18/Resume-Builder?style=flat-square)](https://github.com/iabhishek18/Resume-Builder/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/iabhishek18/Resume-Builder?style=flat-square)](https://github.com/iabhishek18/Resume-Builder/network)
-[![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](./1/License.md)
+[![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](./LICENSE)
 
 ---
 
 **Build your professional resume in minutes — no sign-up required.**
 
-[View Demo](#demo) · [Report Bug](https://github.com/iabhishek18/Resume-Builder/issues/new?template=bug_report.md) · [Request Feature](https://github.com/iabhishek18/Resume-Builder/issues/new?template=feature_request.md)
+[View Demo](#-demo) · [Report Bug](https://github.com/iabhishek18/Resume-Builder/issues/new?template=bug_report.md) · [Request Feature](https://github.com/iabhishek18/Resume-Builder/issues/new?template=feature_request.md)
 
 </div>
 
@@ -59,16 +59,16 @@
 
 ## 🎬 Demo
 
-### Landing Page
+### Template Previews
 
 The landing page provides easy navigation to all three resume templates:
 
 <div align="center">
-  <img src="img/resume-1.jpeg" alt="Standard Resume Template" width="280"/>
+  <img src="assets/images/template-standard-preview.jpeg" alt="Standard Resume Template" width="280"/>
   &nbsp;&nbsp;
-  <img src="img/resume-2.jpeg" alt="Modern Resume Template" width="280"/>
+  <img src="assets/images/template-modern-preview.jpeg" alt="Modern Resume Template" width="280"/>
   &nbsp;&nbsp;
-  <img src="img/resume-3.jpg" alt="Basic Resume Template" width="280"/>
+  <img src="assets/images/template-basic-preview.jpg" alt="Basic Resume Template" width="280"/>
 </div>
 
 > **Note:** For the best experience, use **Google Chrome**.
@@ -77,15 +77,17 @@ The landing page provides easy navigation to all three resume templates:
 
 ## 🎨 Templates
 
-| # | Template | Description |
-|---|----------|-------------|
-| 1 | **Standard Resume** | Classic academic-style layout with tabular education section, ideal for university students |
-| 2 | **Modern Resume** | Clean, contemporary design with a purple-accented sidebar and streamlined sections |
-| 3 | **Basic Resume** | Minimalist template with a cyan theme, perfect for a quick professional resume |
+| # | Template | Directory | Description |
+|---|----------|-----------|-------------|
+| 1 | **Standard** | `templates/standard/` | Classic academic-style layout with tabular education section, ideal for university students |
+| 2 | **Modern** | `templates/modern/` | Clean, contemporary design with a purple-accented sidebar and streamlined sections |
+| 3 | **Basic** | `templates/basic/` | Minimalist template with a cyan theme, perfect for a quick professional resume |
 
 Each template includes sections for:
 
-> Education · Experience · Publications · Projects · Technical Skills · Positions of Responsibility · Achievements · Key Courses · Interests · Extra-Curriculars · References
+> Education · Experience · Publications · Projects · Technical Skills · Positions of Responsibility · Achievements · Key Courses · Hobbies · Fields of Interest · Links · References
+
+Each template also ships with a **cover letter** template inside its `cover-letter/` subdirectory.
 
 ---
 
@@ -126,7 +128,7 @@ Each template includes sections for:
 | **DOM Manipulation** | jQuery, jQuery UI |
 | **Backend (optional)** | PHP (entry-point wrapper) |
 | **Utility Script** | Python 3 (PDF merge & compress) |
-| **Fonts** | Glyphicons Halflings, Google Fonts (Karla) |
+| **Fonts** | Glyphicons Halflings, Google Fonts (Karla, Roboto, Droid Serif, Montserrat, Amarante) |
 
 ---
 
@@ -134,44 +136,72 @@ Each template includes sections for:
 
 ```
 Resume-Builder/
-├── index.html              # Landing page with template selection
-├── index.php               # PHP wrapper for index.html
-├── composer.json            # PHP Composer configuration
-├── css/
-│   └── production.css       # Compiled CSS for landing page
-├── img/                     # Landing page images & social icons
-│   ├── resume-1.jpeg
-│   ├── resume-2.jpeg
-│   ├── resume-3.jpg
-│   └── ...
-├── 1/                       # Template 1 — Standard Resume
-│   ├── index.html
+├── index.html                         # Landing page — template selection
+├── index.php                          # PHP wrapper for index.html
+├── composer.json                      # PHP Composer config
+├── LICENSE                            # MIT License
+├── README.md                          # This file
+│
+├── assets/                            # Landing page static assets
 │   ├── css/
-│   │   ├── bootstrap.min.css
-│   │   ├── main.css
-│   │   ├── theme.css
-│   │   ├── column_scroll.css
-│   │   └── thin_scroll.css
-│   ├── js/
-│   │   ├── main.js          # Core editor logic
-│   │   ├── jquery.min.js
-│   │   ├── jquery-ui.min.js
-│   │   └── bootstrap.min.js
-│   ├── fonts/               # Glyphicon font files
-│   ├── images/              # Template-specific images
-│   ├── letter-template/     # Cover letter template
-│   ├── compress_pdf.py      # PDF merge & compress utility
-│   ├── License.md
-│   └── README.md
-├── 2/                       # Template 2 — Modern Resume
-│   └── ... (same structure as Template 1)
-├── 3/                       # Template 3 — Basic Resume
-│   └── ... (same structure as Template 1)
+│   │   └── main.css                   # Compiled landing page styles
+│   └── images/
+│       ├── template-standard-preview.jpeg
+│       ├── template-modern-preview.jpeg
+│       ├── template-basic-preview.jpg
+│       ├── logo.svg
+│       ├── facebook.svg
+│       ├── instagram.svg
+│       ├── twitter.svg
+│       └── ...                        # Other landing page images
+│
+├── scripts/                           # Shared utility scripts
+│   └── compress_pdf.py                # Merge & compress multi-page PDFs
+│
+├── templates/                         # Resume templates
+│   ├── standard/                      # Template 1 — Standard Resume
+│   │   ├── index.html                 # Template editor page
+│   │   ├── letter.html                # Cover letter editor
+│   │   ├── css/
+│   │   │   ├── bootstrap.min.css
+│   │   │   ├── main.css               # Core template styles
+│   │   │   ├── theme.css              # Color theme
+│   │   │   ├── column-scroll.css      # Column scroll behavior
+│   │   │   └── thin-scroll.css        # Thin scrollbar styles
+│   │   ├── js/
+│   │   │   ├── main.js                # Core editor logic
+│   │   │   ├── jquery.min.js
+│   │   │   ├── jquery-ui.min.js
+│   │   │   └── bootstrap.min.js
+│   │   ├── fonts/                     # Glyphicon web fonts
+│   │   ├── images/                    # Template-specific images
+│   │   │   └── nit-warangal-logo.png
+│   │   └── cover-letter/              # Cover letter assets
+│   │       ├── letter.html
+│   │       └── letter.css
+│   │
+│   ├── modern/                        # Template 2 — Modern Resume
+│   │   └── ...                        # (same structure as standard)
+│   │
+│   └── basic/                         # Template 3 — Basic Resume
+│       └── ...                        # (same structure as standard)
+│
 └── .github/
     └── ISSUE_TEMPLATE/
         ├── bug_report.md
         └── feature_request.md
 ```
+
+### Naming Conventions
+
+| Convention | Example | Rationale |
+|------------|---------|-----------|
+| **kebab-case** for CSS files | `column-scroll.css`, `thin-scroll.css` | Standard web convention |
+| **kebab-case** for image files | `nit-warangal-logo.png`, `template-standard-preview.jpeg` | Consistent, URL-friendly |
+| **Descriptive template dirs** | `templates/standard/`, `templates/modern/`, `templates/basic/` | Self-documenting instead of `1/`, `2/`, `3/` |
+| **Grouped assets** | `assets/css/`, `assets/images/` | Separation of concerns |
+| **Shared scripts** | `scripts/compress_pdf.py` | Single source of truth (no duplication) |
+| **Root-level LICENSE** | `LICENSE` | GitHub auto-detection |
 
 ---
 
@@ -247,7 +277,7 @@ If your resume spans multiple pages, use the included Python script to merge and
 
 1. Save individual pages as PDF from the browser (name them `1.pdf`, `2.pdf`, etc.)
 
-2. Open `compress_pdf.py` in any text editor and configure:
+2. Open `scripts/compress_pdf.py` in any text editor and configure:
 
    ```python
    dir_path = "/path/to/your/pdf/files"   # Directory with your PDFs
@@ -258,7 +288,7 @@ If your resume spans multiple pages, use the included Python script to merge and
 3. Run the script:
 
    ```bash
-   python compress_pdf.py
+   python scripts/compress_pdf.py
    ```
 
 > **Note:** You may need to run with `sudo` or adjust file permissions depending on your OS.
@@ -293,12 +323,13 @@ Contributions make the open-source community an amazing place to learn, inspire,
 - [ ] Mobile-responsive editor layout
 - [ ] Export to DOCX format
 - [ ] Add template color theme picker
+- [ ] Deduplicate shared vendor files (`js/`, `fonts/`) into a common directory
 
 ---
 
 ## 📄 License
 
-This project is licensed under the **MIT License**. See the [`License.md`](./1/License.md) file for details.
+This project is licensed under the **MIT License**. See the [`LICENSE`](./LICENSE) file for details.
 
 ---
 
